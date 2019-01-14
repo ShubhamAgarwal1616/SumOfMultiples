@@ -15,6 +15,10 @@ describe SumOfMultiples do
         expect(numbers.sum_of_multiples(1000)).to eql(0)
       end
 
+      it "all numbers are multiples of one" do
+        numbers = SumOfMultiples.new(1)
+        expect(numbers.sum_of_multiples(100)).to eql(4950)
+      end
     end
 
   end
