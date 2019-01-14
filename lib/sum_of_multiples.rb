@@ -12,13 +12,15 @@ class SumOfMultiples
     elsif @numbers == [1]
       (range * (range - 1)) / 2
     else
+      multiples = []
       @numbers.inject(0) do |sum, factor|
         current_factor = factor
-        if @numbers.index(factor) ==  0
-          while factor < range
+        while factor < range
+          if !multiples.include?(factor)
             sum += factor
-            factor += current_factor
           end
+          multiples << factor
+          factor += current_factor
         end
         sum
       end

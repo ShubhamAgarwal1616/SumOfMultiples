@@ -29,6 +29,11 @@ describe SumOfMultiples do
         numbers = SumOfMultiples.new(5, 25)
         expect(numbers.sum_of_multiples(51)).to eql(275)
       end
+
+      it "each multiple is counted only once" do
+        numbers = SumOfMultiples.new(3, 5)
+        expect(numbers.sum_of_multiples(100)).to eql(2318)
+      end
     end
 
   end
