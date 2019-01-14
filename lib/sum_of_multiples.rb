@@ -11,6 +11,14 @@ class SumOfMultiples
       0
     elsif @numbers == [1]
       (range * (range - 1)) / 2
+    else
+      @numbers.inject(0) do |sum, factor|
+        while factor < range
+          sum += factor
+          factor += factor
+        end
+        sum
+      end
     end
   end
 

@@ -19,6 +19,11 @@ describe SumOfMultiples do
         numbers = SumOfMultiples.new(1)
         expect(numbers.sum_of_multiples(100)).to eql(4950)
       end
+
+      it "only one factor is given" do
+        numbers = SumOfMultiples.new(3)
+        expect(numbers.sum_of_multiples(7)).to eql(9)
+      end
     end
 
   end
