@@ -13,9 +13,12 @@ class SumOfMultiples
       (range * (range - 1)) / 2
     else
       @numbers.inject(0) do |sum, factor|
-        while factor < range
-          sum += factor
-          factor += factor
+        current_factor = factor
+        if @numbers.index(factor) ==  0
+          while factor < range
+            sum += factor
+            factor += current_factor
+          end
         end
         sum
       end

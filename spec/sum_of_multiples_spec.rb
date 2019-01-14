@@ -24,6 +24,11 @@ describe SumOfMultiples do
         numbers = SumOfMultiples.new(3)
         expect(numbers.sum_of_multiples(7)).to eql(9)
       end
+
+      it "first factor is multiple of second factor" do
+        numbers = SumOfMultiples.new(5, 25)
+        expect(numbers.sum_of_multiples(51)).to eql(275)
+      end
     end
 
   end
