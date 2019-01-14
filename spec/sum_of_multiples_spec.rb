@@ -34,6 +34,11 @@ describe SumOfMultiples do
         numbers = SumOfMultiples.new(3, 5)
         expect(numbers.sum_of_multiples(100)).to eql(2318)
       end
+
+      it "limit for sum is very large" do
+        numbers = SumOfMultiples.new(3, 5)
+        expect(numbers.sum_of_multiples(1000)).to eql(233168)
+      end
     end
 
   end
