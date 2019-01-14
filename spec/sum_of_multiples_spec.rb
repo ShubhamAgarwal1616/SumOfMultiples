@@ -39,6 +39,11 @@ describe SumOfMultiples do
         numbers = SumOfMultiples.new(3, 5)
         expect(numbers.sum_of_multiples(1000)).to eql(233168)
       end
+
+      it "cardinality of factors is greater than three and limit is large" do
+        numbers = SumOfMultiples.new(2, 3, 5, 7, 11)
+        expect(numbers.sum_of_multiples(10000)).to eql(39614537)
+      end
     end
 
   end
