@@ -7,7 +7,7 @@ class SumOfMultiples
   end
 
   def sum_of_multiples(range)
-    if @numbers.length == 0
+    if @numbers.length == 0 || @numbers == [0]
       0
     end
   end

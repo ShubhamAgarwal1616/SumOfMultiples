@@ -9,6 +9,12 @@ describe SumOfMultiples do
         numbers = SumOfMultiples.new()
         expect(numbers.sum_of_multiples(1000)).to eql(0)
       end
+
+      it "multiple of zero is only zero" do
+        numbers = SumOfMultiples.new(0)
+        expect(numbers.sum_of_multiples(1000)).to eql(0)
+      end
+
     end
 
   end
